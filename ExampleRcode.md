@@ -651,7 +651,7 @@ train$cluster<-as.character(train$cluster)
 train$nextcluster<-as.character(train$nextcluster)  
 train$treatment<-as.character(train$treatment)  
 train$reward<-as.numeric(train$reward)  
-# Define reinforcement learning parameters  
+#Define reinforcement learning parameters  
 control <- list(alpha = 0.1, gamma = 0.99, epsilon = 0.1)  
 model3 <- ReinforcementLearning(train, s = "cluster", a = "treatment", r = "reward",   
                                 s_new = "nextcluster", iter = 5000, control = control,verbose=TRUE)  
