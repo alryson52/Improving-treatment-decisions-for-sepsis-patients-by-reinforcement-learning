@@ -1,19 +1,19 @@
 # Improving-treatment-decisions-for-sepsis-patients-by-reinforcement-learning
 The repository include the example R code for the thesis, 'Improving treatment decisions for sepsis patients by reinforcement learning'.
 
-library(writexl)
-library(mice)
-library(ReinforcementLearning)
-library(Rfast)
-library(data.table)
-library(gplots)
-library(ggplot2)
-library(ggpubr)
-library(tidyr)
+library(writexl)  
+library(mice)  
+library(ReinforcementLearning) 
+library(Rfast)  
+library(data.table)  
+library(gplots)  
+library(ggplot2)  
+library(ggpubr)  
+library(tidyr)  
 
-setwd()#set up the working directory
-data<-read.csv()#read the dataset file #18014 
-#delete data hospital dischargestatus 144
+setwd()#set up the working directory  
+data<-read.csv()#read the dataset file #18014  
+#delete data hospital dischargestatus 144  
 data<-data[data$hospitaldischargestatus!="",]#17870
 data<-data[complete.cases(data$day),]#17825
 data<-data.table(data)
